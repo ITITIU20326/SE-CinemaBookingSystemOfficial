@@ -23,6 +23,27 @@ function Login() {
         localStorage.setItem("token", res.token);
       }
     }
+    // const inputUsername = document.querySelector(".input-login-username");
+    // const inputPassword = document.querySelector(".input-login-password");
+    // const btnLogin = document.querySelector(".btn");
+    // btnLogin.addEventListener("click", (e) => {
+    //   e.preventDefault();
+    //   if (inputUsername.value === "" || inputPassword.value === "") {
+    //     alert("vui lòng không để trống");
+    //   } else {
+    //     const user = JSON.parse(localStorage.getItem(inputUsername.value));
+    //     if (
+    //       user.username === inputUsername.value &&
+    //       user.password === inputPassword.value
+    //     ) {
+    //       alert("login successful");
+    //       window.location.href = "";
+    //     } else {
+    //       alert("login fail");
+    //     }
+    //   }
+    // });
+
     return(
         
         <div className="">
@@ -42,13 +63,13 @@ function Login() {
                     <div className="des1-title">In order to use the editing and rating capabilities of TMDB, as well as get personal recommendations you will need to login to your account. If you do not have an account, registering for an account is free and simple. Click here to get started.
                     </div>
                     <div className="des2-title">If you signed up but didn't get your verification email, click here to have it resent.</div>
-                    <div className="text">Username</div>
-                    <input type="text" placeholder="Email or username..."
+                    <div className="username">Username</div>
+                    <input type="text-username" placeholder="Email or username..."
                     value={email}
                     onChange={(event) => setEmail(event.target.value)}/>
                     
-                    <div className="text">Password</div>
-                    <input type="text" placeholder="Password..."
+                    <div className="password">Password</div>
+                    <input type="text-password" placeholder="Password..."
                     value={password}
                     onChange={(event) => setPassword(event.target.value)}/>
                 </div>
