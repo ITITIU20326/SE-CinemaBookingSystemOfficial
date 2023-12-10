@@ -1,0 +1,32 @@
+.slider{
+    margin: 0 auto;
+    height: 300px;
+    /* background-color: cadetblue; */
+    background-image: url("https://cdn-ssl.s7.disneystore.com/is/image/ShopDisney/mb_frozen2_20200316_2x?fit=constrain&cropN=0,0,1,1&fmt=webp&qlt=70&wid=1200");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+}
+.slider-all{
+    height: 300px;
+    background-color: rgba(20, 27, 88, 0.584);
+}
+.slider-body{
+    color: white;
+    padding: 50px 30px 30px 30px;
+    
+}
+.slider-body h1{
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+}
+.slider-body h2{
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+}
+.slider-search{
+    text-align: center;
+}
