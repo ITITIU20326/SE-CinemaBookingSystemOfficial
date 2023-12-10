@@ -1,16 +1,12 @@
 import React from 'react'
-import { SearchOutlined } from '@ant-design/icons';
-import {Button} from "antd"
 import {Link, useNavigate} from "react-router-dom"
 import "./style.css"
 function Navigation() {
   let navigate = useNavigate()
   let handleLogout = () => {
-    localStorage.removeItem("accessToken")
-    navigate("/login")
+    navigate("/signup")
   }
   let handleLogin = () => {
-    localStorage.setItem("accessToken", true)
     navigate("/login")
   }
   return (
@@ -23,8 +19,8 @@ function Navigation() {
           <p>More</p>
         </div>
         <div className="navright">
-          <p><Button onClick={handleLogin}>Log In</Button></p>
-          <p><Button onClick={handleLogout}>Sign Up</Button></p>
+          <p><button onClick={handleLogin}>Sign In</button></p>
+          <p><button onClick={handleLogout}>Sign Up</button></p>
         </div>
     </div>
   )

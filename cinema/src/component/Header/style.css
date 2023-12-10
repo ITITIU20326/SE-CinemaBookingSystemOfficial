@@ -8,6 +8,7 @@ p{
     justify-content: space-between;
     align-items: center;
     /* background-color: #031d33;  */
+    padding-bottom: 30px;
 }
 .container .navleft{
     display: flex;
@@ -17,6 +18,7 @@ p{
     gap: 2rem;
     color: white;
     font-weight: 600;
+    margin-top: 0;
 }
 .navleft{
     cursor: pointer;
@@ -32,6 +34,7 @@ p{
     font-size: 25px;
     color: rgb(114, 145, 255);
     cursor: pointer;
+    padding-bottom:20px;
 }
 
 

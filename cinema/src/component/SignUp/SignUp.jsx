@@ -7,15 +7,18 @@ import { Layout } from 'antd'
 import { useToken } from 'antd/es/theme/internal';
 import axios from 'axios';
 const { Header, Content } = Layout;
-function Login() {
+function SignUp() {
+
+    const [phone , setPhone] = useState("");
+    const [name , setName] = useState("");
     const [email , setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const loginApi = (email, password) => {
-      return axios.post("/api/login", {email, password});
-    }
-    const inputUsername = document.querySelector(".text-username");
-    const inputPassword = document.querySelector(".text-password");
-    const btnLogin = document.querySelector(".login");
+
+
+
+    // const inputUsername = document.querySelector(".text-username");
+    // const inputPassword = document.querySelector(".text-password");
+    // const btnLogin = document.querySelector(".login");
     // btnLogin.addEventListener("click", (e) => {
     //   e.preventDefault();
     //   if (inputUsername.value === "" || inputPassword.value === "") {
@@ -49,10 +52,17 @@ function Login() {
             </Header>
             <Content>
                 <div className="login-container">
-                    <div className="title">Sign in your account</div>  
-                    <div className="des1-title">In order to use the editing and rating capabilities of TMDB, as well as get personal recommendations you will need to login to your account. If you do not have an account, registering for an account is free and simple. Click here to get started.
-                    </div>
-                    <div className="des2-title">If you signed up but didn't get your verification email, click here to have it resent.</div>
+                <div className="title">Sign up your account</div> 
+                    <div className="username">Your phone number</div>
+                    <input type="text-phone" placeholder="Enter your phone number..."
+                    value={email}
+                    onChange={(event) => setEmail(event.target.value)}/>
+
+                    <div className="username">Your name</div>
+                    <input type="text-username" placeholder="Email or username..."
+                    value={email}
+                    onChange={(event) => setEmail(event.target.value)}/>
+
                     <div className="username">Username</div>
                     <input type="text-username" placeholder="Email or username..."
                     value={email}
@@ -64,8 +74,8 @@ function Login() {
                     onChange={(event) => setPassword(event.target.value)}/>
                 </div>
                 <div className='button'>
-                        <button className='login' >Sign In</button>
-                        <button className='register'>Sign Up</button>
+                        {/* <button className='login' >Sign In</button> */}
+                        <button className='signup'>Sign Up</button>
                     </div>
             </Content>
             <Footer />
@@ -74,4 +84,4 @@ function Login() {
         </div>
     )
 }
-export default Login;
+export default SignUp   ;

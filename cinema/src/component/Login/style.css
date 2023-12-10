@@ -56,7 +56,7 @@ button{
     font-size: large;
     justify-content: left;
     text-align: left;
-    margin-top: 30px;
+    cursor: pointer;
 }
 .login{
     background-color:#01B4E4 ;

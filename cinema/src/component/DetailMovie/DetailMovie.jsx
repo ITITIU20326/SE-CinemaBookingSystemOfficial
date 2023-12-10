@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 // import { useParams } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import {Layout} from "antd"
+import {Button} from "antd"
 import { Col, Row} from 'antd';
 import Navigation from '../Header';
 import Footer from '../Footer/Footer';
@@ -9,10 +10,9 @@ import { SmoothHorizontalScrolling } from '../Content/utils';
 import { useRef } from 'react';
 import {CaretLeftOutlined, CaretRightOutlined, FacebookOutlined, TwitterOutlined, InstagramOutlined} from '@ant-design/icons';
 import styled from "styled-components"
-import {Link} from "react-router-dom"
 import "./style.css"
 import Recommendations from './Recommendations/Recommendations';
-
+import { Link, useNavigate } from 'react-router-dom';
 
 const { Header, Content } = Layout;
    
@@ -71,6 +71,12 @@ function DetailMovie() {
           setRecs(data.results)
       })
   }, [])
+
+    let navigate = useNavigate()
+    let handleBooking = () => {
+      localStorage.removeItem("accessToken")
+      navigate("/booking")
+    }
 
   return (
     <div>
@@ -146,10 +152,10 @@ function DetailMovie() {
                       <Col span={5} style={{marginLeft: 15, marginTop: 37}}>
                         <Row justify={"left"} style={{marginBottom: 15}}>
                           <div className="background-booking">
-                            <button className='booking'>Booking Now</button>
+                            <p><button onClick={handleBooking} className='booking'>Booking Now</button></p>
                           </div>
                         </Row>
-                        <Row>
+                        <Row> 
                           <Col>
                             <h4>Original Title</h4>
                             <p>{detail.original_title}</p>
