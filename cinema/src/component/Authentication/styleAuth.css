@@ -1,0 +1,105 @@
+.main-body body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(180deg, rgba(0, 255, 153, 0.42) 0%, rgba(0, 203, 248, 0.42) 100%);
+}
+.card{
+    background: rgba(186, 194, 210, 0.81);
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 400px;
+    height: 560px;
+}
+.text-center{
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    color: #000;
+    font-size: 36px;
+    gap: 40px;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.input-header{
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    color: #000;
+    font-size: 16px;
+    width: 100%;
+    margin: 10px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    background: rgba(186, 194, 210, 0.81);
+    background: transparent;
+    height: 30px;
+    width: 300px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+.underline{
+    width: 300px;
+    height: 1px;
+    background-color: #000;
+    border-color: #000;
+}
+.submit-container{
+    display: flex;
+    margin-left: 50px;
+}
+.sub-button button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 50px;
+    background-color: #1A2C50;
+    color: #0F9;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid #0F9;
+}
+.sub-infor h6{
+    display: flex;
+    flex-direction: column;
+    color: #5A637A;
+    font-size: 12px;
+    width: 100%;
+    font-weight: 400;
+    margin: 10px 0px;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;   
+}
+.sign-container{
+    display: flex;
+    margin-left: 50px;
+}
+.sign-button button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 50px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid #000;
+    text-decoration: none;
+}
