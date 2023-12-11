@@ -5,6 +5,7 @@ p{
 .container {
     display: flex;
     flex-direction: row;
+    position: relative;
     justify-content: space-between;
     align-items: center;
     /* background-color: #031d33;  */
@@ -50,4 +51,19 @@ p{
     background: linear-gradient(to right, #00ff99 20%, #0099ff 100%);
     background-clip: text;
     color: transparent;
+}
+.header-button button{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 30px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid #0F9;
 }

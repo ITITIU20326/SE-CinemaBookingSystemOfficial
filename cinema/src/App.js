@@ -5,9 +5,11 @@ import { useState } from "react";
 import {Routes, Route, redirect } from "react-router-dom"
 import DetailMovie from "./component/DetailMovie/DetailMovie";
 import DetailPeople from "./component/DetailPeople/DetailPeople";
-import Login from "./component/Login/Login";
+//import Login from "./component/Login/Login";
 import PopularPeople from "./component/Popular People/PopularPeople";
-import SignUp from "./component/SignUp/SignUp"
+//import SignUp from "./component/SignUp/SignUp"
+import SignUp from "./component/Authentication/SignUp";
+import LogIn from "./component/Authentication/LogIn"
 import Booking from "./component/Booking/booking";
 function App() {
   // const [token, setToken] = useState()
@@ -20,7 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         {/* <Route path="/" element={token ? <HomePage /> : redirect("/")} /> */}
-        <Route path="/login" element={<Login/>}/>
+        <Route path="/login" element={<LogIn/>}/>
         <Route path="/signup" element={<SignUp/>}/>
         <Route path="/search" element={<Search/>}/>
         <Route path="/movie/:id" element={<DetailMovie/>}/>
