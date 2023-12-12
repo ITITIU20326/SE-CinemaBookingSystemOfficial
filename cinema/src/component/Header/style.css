@@ -35,7 +35,16 @@ p{
     font-size: 25px;
     color: rgb(114, 145, 255);
     cursor: pointer;
-    padding-bottom:20px;
+    padding-bottom:10px;
+}
+
+.header-button1::before, .header-button2::before {
+    transition: 0.8s;
+}
+
+.header-button1:hover, .header-button2:hover {
+    background-color: #0099ff;
+    color: whitesmoke;
 }
 
 
@@ -52,8 +61,7 @@ p{
     background-clip: text;
     color: transparent;
 }
-.header-button button{
-    margin-top: 10px;
+.header-button1{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,9 +69,26 @@ p{
     height: 30px;
     background-color: #fff;
     color: #000;
-    border-radius: 6px;
+    border-radius: 10px;
     font-weight: 500;
     cursor: pointer;
     font-family: Arial, Helvetica, sans-serif;
     border: 2px solid #0F9;
+    transition: 0.15s;
+}
+
+.header-button2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 30px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid #0F9;
+    transition: 0.15s;
 }

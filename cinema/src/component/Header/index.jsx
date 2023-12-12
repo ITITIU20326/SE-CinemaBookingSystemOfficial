@@ -19,8 +19,8 @@ function Navigation() {
           <p>More</p>
         </div>
         <div className="navright">
-          <p className="header-button" ><button onClick={handleLogin}>Sign In</button></p>
-          <p className="header-button" ><button onClick={handleLogout}>Sign Up</button></p>
+          <button className="header-button1" onClick={handleLogin}>Sign In</button>
+          <button className="header-button2" onClick={handleLogout}>Sign Up</button>
         </div>
     </div>
   )
