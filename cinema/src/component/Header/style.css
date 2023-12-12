@@ -22,7 +22,6 @@ p{
     margin-top: 0;
 }
 .navleft{
-    cursor: pointer;
     user-select: none;
     color: white;
 }
@@ -47,7 +46,6 @@ p{
     color: whitesmoke;
 }
 
-
 .logo{
     padding-right: 25px;
     font-size: 30px;
@@ -60,6 +58,7 @@ p{
     background: linear-gradient(to right, #00ff99 20%, #0099ff 100%);
     background-clip: text;
     color: transparent;
+    cursor: pointer;
 }
 .header-button1{
     display: flex;
@@ -91,4 +90,9 @@ p{
     font-family: Arial, Helvetica, sans-serif;
     border: 2px solid #0F9;
     transition: 0.15s;
+}
+
+.movies:hover, .tvshows:hover, .people:hover, .more:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }

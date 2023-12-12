@@ -13,13 +13,13 @@ function Navigation() {
     <div className='container'>
         <div className="navleft">
           <p><Link to="/" className='logo'>TMDB</Link></p>
-          <p>Movies</p>
-          <p>TV Shows</p>
-          <p><Link to={"/people"} style={{color: "white"}}>People</Link></p>
-          <p>More</p>
+          <p className='movies'><Link to={"/"}></Link>Movies</p>
+          <p className='tvshows'><Link to={"/"}></Link>TV Shows</p>
+          <p className='people'><Link to={"/people"} style={{color: "white"}}>People</Link></p>
+          <p className='more'>More</p>
         </div>
         <div className="navright">
-          <button className="header-button1" onClick={handleLogin}>Sign In</button>
+          <button className="header-button1" onClick={handleLogin} >Sign In</button>
           <button className="header-button2" onClick={handleLogout}>Sign Up</button>
         </div>
     </div>
