@@ -1,0 +1,73 @@
+.title-col{
+    padding-left: 50px;
+}
+.col-img{
+    text-align: center;
+}
+.col-img img{
+    border: none;
+    border-radius: 10px;
+    height: 450px;
+    width: 300px;
+}
+.schedule-day{
+    list-style: none;
+    padding-top: 20px;
+    margin-right: 20px;
+}
+.time1{
+    list-style: none;
+    padding-top: 20px;
+    margin-right: 20px;
+    
+}
+.time2{
+    list-style: none;
+    padding-top: 20px;
+    margin-right: 20px;
+}
+.time3{
+    list-style: none;
+    padding-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+div>Row{
+    margin-right: 20px;
+}
+.btnright1{
+    position: absolute;
+    top: 30%;
+    right: 25px;
+    z-index: 20;
+    transform-origin: center;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 70px;
+    width: 40px;
+    font-size: 25px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btnleft1{
+    position: absolute;
+    top: 30%;
+    left: 25px;
+    z-index: 20;
+    transform-origin: center;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 70px;
+    width: 40px;
+    font-size: 25px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.booking-form{
+    border: 1px solid black;
+    border-radius: 20px;
+}
