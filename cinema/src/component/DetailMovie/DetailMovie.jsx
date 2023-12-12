@@ -144,23 +144,23 @@ function DetailMovie() {
                         <div className='btnleft1' onClick={handleScrollLeft}>
                           <CaretLeftOutlined className='icon'/>
                         </div>
-                        <div className='btnright1' onClick={handleScrollRight}>
+                        <div className='btnright1' onClick={handleScrollRight}> 
                           <CaretRightOutlined className='icon'/>
                         </div>
                         <Recommendations recs={recs}/>
                       </Col>
                       <Col span={5} style={{marginLeft: 15, marginTop: 37}}>
-                        <Row justify={"left"} style={{marginBottom: 15}}>
+                        <Row justify={"left"} style={{marginBottom: 15 ,marginTop: 35}}>
                           <div className="background-booking">
                             <p><button onClick={handleBooking} className='booking'>Booking Now</button></p>
                           </div>
                         </Row>
-                        <Row> 
+                        <Col> 
                           <Col>
                             <h4>Original Title</h4>
                             <p>{detail.original_title}</p>
                           </Col>
-                        </Row>
+                        </Col>
                         <Row>
                           <Col>
                             <h4>Status</h4>

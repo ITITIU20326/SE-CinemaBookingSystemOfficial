@@ -1,0 +1,63 @@
+
+.btn-day{
+    padding: 15px 20px 15px 20px;
+    margin: 20px 20px 20px 0;
+    &:hover{
+        background-color: #031d33 ;
+        color: white;
+    }
+    border-radius: 15px;
+    border: 1px solid black;
+    font-weight: 500;
+}
+.content-board{
+    padding-left: 200px;
+}
+
+
+/* .btnleft{
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    z-index: 20;
+    transform-origin: center;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 70px;
+    width: 40px;
+    font-size: 25px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btnleft:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.icon{
+    opacity: 0.7;
+    transition: all 0.3s linear;
+}
+.icon:hover{
+    opacity: 1;
+    transform: scale(1.2);
+}
+.btnright{
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    z-index: 20;
+    transform-origin: center;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 70px;
+    width: 40px;
+    font-size: 25px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btnright:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+} */
