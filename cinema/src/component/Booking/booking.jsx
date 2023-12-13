@@ -7,13 +7,12 @@ import Navigation from '../Header';
 import Footer from '../Footer/Footer';
 import { SmoothHorizontalScrolling } from '../Content/utils';
 import { useRef } from 'react';
-import {CaretLeftOutlined, CaretRightOutlined, FacebookOutlined, TwitterOutlined, InstagramOutlined} from '@ant-design/icons';
+import {CaretLeftOutlined, CaretRightOutlined} from '@ant-design/icons';
 import styled from "styled-components"
 import "./style.css"
-import { Link, useNavigate } from 'react-router-dom';
-import YourComponent from './Time/time';
 import Day from './Day/day';
 import Time from './Time/time';
+import CinemaSchedule from './Time/time'
 
 const { Header, Content } = Layout;
 // Sample data representing the schedule
@@ -21,7 +20,8 @@ const { Header, Content } = Layout;
    
 function BookingMovie() {
   const {id} = useParams()
-    const [detail, setDetail] = useState({})
+    const [selectedTime, setSelectedTime] = useState(null);
+    const [detail1, setDetail1] = useState({})
     const [casts, setCasts] = useState([])
     const [recs, setRecs] = useState([])
     const API_DETAIL = `https://api.themoviedb.org/3/movie/${id}?api_key=9b00e03c6d53581effb063d999d11128&language=vi`;
@@ -47,13 +47,25 @@ function BookingMovie() {
         sliderRef.current.scrollLeft)
     }
   }
+  const handleSelectTime = (slot) => {
+    setSelectedTime(slot);
+  };
+
+  const handleBookNow = () => {
+    if (selectedTime) {
+      // Implement your booking logic here
+      alert(`Booking confirmed for ${selectedTime.time}`);
+    } else {
+      alert('Please select a time slot');
+    }
+  };
 
     useEffect(() => {
         fetch(API_DETAIL)
         .then(res => res.json())
         .then(data => {
             console.log(data)
-            setDetail(data)
+            setDetail1(data)
         })
         .catch(error => {
           console.error('Error fetching movie details:', error);
@@ -93,44 +105,74 @@ function BookingMovie() {
           </Header>
           <Content>
             <Row>
-                <Col></Col>
+              <Col></Col>
               <Col span={14}>
+              <Col>
               <Day/>
-              <Time/>
-              <Time/>
+              <div className='btnleft' onClick={handleScrollLeft}>
+                <CaretLeftOutlined className='icon'/>
+              </div>
+              <div className='btnright' onClick={handleScrollRight}>
+                <CaretRightOutlined className='icon'/>
+              </div>
+              </Col>
+              <Col>
+              <p className='name-class'>REGULAR 2D</p>
               <Time/>
               </Col>
+              <Col>
+              <p className='name-class'>GOLD CLASS 2D</p>
+              <Time/>
+              </Col>
+              <Col>
+              <p className='name-class'>VELVET 2D</p>
+              <Time/>
+              </Col>
+              </Col>
               
-              <Col style={{ marginTop: 80}} span={6} className="col-img"><img src={`https://www.themoviedb.org/t/p/original${detail.poster_path}`}></img>
+              <Col style={{ marginTop: 80}} span={6} className="col-img"><img src={`https://www.themoviedb.org/t/p/original${detail1.poster_path}`}></img>
                 <Col> 
                   <Col>
-                    <h4>Original Title</h4>
-                    <p>{detail.original_title}</p>
+                  <h1>{detail1.title || detail1.name}</h1> 
                   </Col>
                 </Col>
                 <Col> 
                   <Col>
                     <h4>Original Title</h4>
-                    <p>{detail.original_title}</p>
+                    <p>{detail1.original_title}</p>
                   </Col>
                 </Col>
                 <Col> 
                   <Col>
                     <h4>Original Title</h4>
-                    <p>{detail.original_title}</p>
+                    <p>{detail1.original_title}</p>
                   </Col>
                 </Col>
                 <Col> 
                   <Col>
                     <h4>Original Title</h4>
-                    <p>{detail.original_title}</p>
+                    <p>{detail1.original_title}</p>
                   </Col>
                 </Col>
                 <Col> 
-                  <p className='booking-form'>
+                  <Col>
                     <h4>Original Title</h4>
-                    <p>{detail.original_title}</p>
-                  </p>
+                    <p>{detail1.original_title}</p>
+                  </Col>
+                </Col>
+                <Col> 
+                  <Col className='booking-form'>
+                    <h4>FRESHMEN TAN PHU</h4>
+                    <h4>MON, 16 OCTOBER 2023</h4>
+                    <h4>REGULAR 2D </h4>
+                    <div className='content-booking'>
+                      <p>Selected Time: {selectedTime ? selectedTime.time : 'None'}</p>
+                      {/* <CinemaSchedule onSelectTime={handleSelectTime} /> */}
+                      <h4>* Seat selection can be made later</h4>
+                      <div className='background-booking'><button className='booking' onClick={handleBookNow}>Book Now</button></div>
+                    </div>
+                    <p>{detail1.original_title}</p>
+                  </Col>
                 </Col>
               </Col>
               

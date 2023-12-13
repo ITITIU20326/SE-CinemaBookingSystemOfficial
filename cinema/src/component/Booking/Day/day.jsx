@@ -9,13 +9,13 @@ import {CaretLeftOutlined, CaretRightOutlined} from '@ant-design/icons';
 
 // Sample data representing thge schedule
 const scheduleData = [
-  { id: 1, time: 'SUN', available: true },
-  { id: 2, time: 'MON', available: true },
-  { id: 3, time: 'TUE', available: true },
-  { id: 4, time: 'WED', available: true },
-  { id: 5, time: 'THU', available: true },
-  { id: 6, time: 'FRI', available: true },
-  { id: 7, time: 'STA', available: true },
+  { id: 1, time: '15 OCT SUN', available: true },
+  { id: 2, time: '16 OCT MON', available: true },
+  { id: 3, time: '17 OCT TUE', available: true },
+  { id: 4, time: '18 OCT WED', available: true },
+  { id: 5, time: '19 OCT THU', available: true },
+  { id: 6, time: '20 OCT FRI', available: true },
+  { id: 7, time: '21 OCT STA', available: true },
   // Add more schedule data as needed
 ];
 
@@ -88,15 +88,10 @@ const handleScrollRight = () => {
   }
   return (
     <div className='content-board'>
-      <h1>Cinema Booking System</h1>
+      <h1 className='title-name'>Cinema Booking System</h1>
       
       <BookingForm />
-      {/* <div className='btnleft' onClick={handleScrollLeft}>
-          <CaretLeftOutlined className='icon'/>
-        </div>
-        <div className='btnright' onClick={handleScrollRight}>
-          <CaretRightOutlined className='icon'/>
-        </div> */}
+        
     </div>
   );
 };

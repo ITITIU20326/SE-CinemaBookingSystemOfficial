@@ -2,13 +2,12 @@ import React, { useEffect, useState } from 'react'
 // import { useParams } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import {Layout} from "antd"
-import {Button} from "antd"
 import { Col, Row} from 'antd';
 import Navigation from '../Header';
 import Footer from '../Footer/Footer';
 import { SmoothHorizontalScrolling } from '../Content/utils';
 import { useRef } from 'react';
-import {CaretLeftOutlined, CaretRightOutlined, FacebookOutlined, TwitterOutlined, InstagramOutlined} from '@ant-design/icons';
+import {CaretLeftOutlined, CaretRightOutlined} from '@ant-design/icons';
 import styled from "styled-components"
 import "./style.css"
 import Recommendations from './Recommendations/Recommendations';

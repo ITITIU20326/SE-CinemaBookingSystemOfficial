@@ -12,10 +12,12 @@
 }
 .content-board{
     padding-left: 200px;
+    font-size: 20px;
 }
 
 
-/* .btnleft{
+
+.btnleft{
     position: absolute;
     top: 50%;
     left: 25px;
@@ -60,4 +62,4 @@
 }
 .btnright:hover{
     background-color: rgba(0, 0, 0, 0.8);
-} */
+}
