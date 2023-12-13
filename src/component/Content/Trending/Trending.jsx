@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
+
 import { SmoothHorizontalScrolling } from '../utils';
 import { useRef } from 'react';
 import {CaretLeftOutlined, CaretRightOutlined} from '@ant-design/icons';
@@ -7,10 +8,13 @@ import {Link} from "react-router-dom"
 import "./style.css"
 const API_IMG="https://image.tmdb.org/t/p/w500/";
 
+
 function Trending({data}) {
 
   const sliderRef = useRef()
   const movieRef = useRef()
+
+  
   const handleScrollRight = () => {
     // console.log(sliderRef.current.scrollWidth)
     const maxScrollLeft = sliderRef.current.scrollWidth - sliderRef.current.clientWidth;
@@ -48,7 +52,7 @@ function Trending({data}) {
                 <div className='movieitem' ref={movieRef}>
                   <img src={`https://image.tmdb.org/t/p/original/${data.poster_path}`} alt="" />
                   <div className='moviename'>{data.title || data.name}</div>
-                </div>
+                </div>  
               </Link>
             )) : <div>loading</div>}
             {/* <div className='movieitem' ref={movieRef}>

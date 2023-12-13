@@ -2,6 +2,10 @@ import React from "react";
 import "./style.css";
 import {seats, prices, addprices, addseats, subprices, dropseats, reset} from "./const.js"
 
+import { useEffect,  useState} from 'react'
+import { useParams } from 'react-router-dom'
+import {id} from "./const.js"
+
 function BookingPart() {
   var color = "rgb(240, 240, 240)";
   var color2 = "rgb(0, 157, 255)";
@@ -18,21 +22,54 @@ function BookingPart() {
               });         
           }
       document.getElementById("seat").innerText = seats.toString();
-      document.getElementById("price").innerText = prices + " vnd";
+      document.getElementById("price").innerText = prices + " VND";
   }
-  
-  function removeItemAll(arr, value) {
-  const index = arr.indexOf(value);
-      if (index > -1) { 
-      arr.splice(index, 1); 
-  }
-}   
+  //const {id} = 
+  const [detail, setDetail] = useState({});
+  const [movies, setMovies] = useState([]);
+  const API_TRENDING="https://api.themoviedb.org/3/trending/all/day?api_key=9b00e03c6d53581effb063d999d11128";
+  const API_DETAIL = `https://api.themoviedb.org/3/movie/${id}?api_key=9b00e03c6d53581effb063d999d11128&language=vi`;
+
+//   const fetchMovie = (api) => {
+//     fetch(api)
+//       .then((res)=>res.json())
+//       .then(response=>{
+//         // console.log(response);
+//         return response.results
+//         //setMovies(response.results)
+//       })
+//   }
+
+  useEffect(() => {
+    fetch(API_TRENDING)
+    .then((res)=>res.json())
+    .then(response=>{
+      // console.log(response);
+      setMovies(response.results)
+    
+    })
+    
+    // const data = fetchMovie(API_TRENDING)
+    // console.log(data)
+    // data && setMovies(data)
+  }, [])
+  let data = movies;
+  useEffect(() => {
+      fetch(API_DETAIL)
+      .then(res => res.json())
+      .then(data => {
+          console.log(data)
+          setDetail(data)
+      })
+  }, [])
+    
   
   
   return (
-  <div className='container3'>
-    <div class="text-wrapper">SELECT A SEAT</div>
-  <p class="p">Choose the seat you will  occupy during the film screening</p>
+  <div className='container3'>      
+    <div class="text-wrapper">{detail.original_title}</div>     
+    <img src={`https://www.themoviedb.org/t/p/original` + detail.poster_path}></img>
+  <p class="p">Choose the seat you will occupy during the film screening</p>
   <div class="seat-status">
       <div class="div-2">
           <div class="rectangle"></div>
@@ -48,9 +85,9 @@ function BookingPart() {
       </div>
   </div>
       <div class="time-picker">
-          <img class="img" src="img/32-clock.svg"/>
+          <img class="img" src={require('../BookingPart/img/clock.png')}/>
           <div class="base-selection">
-              <div class="bioskop">14:30</div>
+              <div class="bioskop">14:40</div>
           </div>
       </div>
       <div class="seats-picker">
@@ -218,7 +255,7 @@ function BookingPart() {
       <div class="layar-bioskop"><div class="text-wrapper-3">Cinema Screen Here</div></div>
       <div class="text-wrapper-4">Total</div>
       <div class="text-wrapper-5">Chair</div>
-      <div class="text-wrapper-6" id="price">0 vnd</div>
+      <div class="text-wrapper-6" id="price">0 VND</div>
       <div class="seat"><div class="text-wrapper-7" id="seat"> </div></div>
   </div>    
   )

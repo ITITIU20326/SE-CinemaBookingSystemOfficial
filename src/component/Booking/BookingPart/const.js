@@ -1,5 +1,6 @@
 export let prices = 0;
-export let seats = [];
+export let seats = []; 
+export let id = 466420;
 
 export function addprices(){
     prices+=50000;
@@ -24,4 +25,8 @@ export function dropseats(seat){
 export function reset(){
     prices = 0;
     seats = [];
+}
+
+export function setID(ID){
+    id = ID;
 }
