@@ -1,8 +1,7 @@
 import HomePage from "./component/HomePage";
 import Search from "./component/Search/Search";
-import { useState } from "react";
 
-import {Routes, Route, redirect } from "react-router-dom"
+import {Routes, Route,} from "react-router-dom"
 import DetailMovie from "./component/DetailMovie/DetailMovie";
 import DetailPeople from "./component/DetailPeople/DetailPeople";
 //import Login from "./component/Login/Login";
@@ -10,7 +9,8 @@ import PopularPeople from "./component/Popular People/PopularPeople";
 //import SignUp from "./component/SignUp/SignUp"
 import SignUp from "./component/Authentication/SignUp";
 import LogIn from "./component/Authentication/LogIn"
-import Booking from "./component/Booking/booking";
+import Booking from "./component/Booking/schedule/booking";
+import BookingPart from "./component/Booking/BookingPart/BookingPart";
 function App() {
   // const [token, setToken] = useState()
   //   if(!token){
@@ -29,6 +29,7 @@ function App() {
         <Route path="/person/:id" element={<DetailPeople/>}/>
         <Route path="/people" element={<PopularPeople/>}/>
         <Route path="/booking" element={<Booking/>}/>
+        <Route path="/BookingPart" element={<BookingPart/>}/>
         {/* <Route path="/private" element={localStorage.getItem("accessToken") ? <Private /> : redirect("/login")} /> */}
         {/* <Route path="/private" element={token ? <Private /> : redirect("/login")} /> */}
       </Routes>

@@ -12,11 +12,12 @@ import styled from "styled-components"
 import "./style.css"
 import Recommendations from './Recommendations/Recommendations';
 import { Link, useNavigate } from 'react-router-dom';
-
+import {setID, id} from './../Booking/BookingPart/const';
 const { Header, Content } = Layout;
    
 function DetailMovie() {
     const {id} = useParams()
+    setID(id);
     const [detail, setDetail] = useState({})
     const [casts, setCasts] = useState([])
     const [recs, setRecs] = useState([])
