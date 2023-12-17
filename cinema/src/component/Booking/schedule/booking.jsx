@@ -35,12 +35,12 @@ function BookingMovie() {
               btns[i].addEventListener("click", function () {    
                   let buttonStyle = getComputedStyle(this);
                   let buttonColor =  buttonStyle["backgroundColor"];
-                  if (buttonColor == color2) {btns[i].style.backgroundColor = color; addtimes(" " + btns[i].textContent);}
-                  else {btns[i].style.backgroundColor = color2  ; droptimes(" " + btns[i].textContent);  
+                  if (buttonColor == color) {btns[i].style.backgroundColor = color2; addtimes("" + btns[i].textContent);}
+                  else {btns[i].style.backgroundColor = color  ; droptimes("" + btns[i].textContent);  
               }
               });         
           }
-      document.getElementById("time").innerText = times; 
+      document.getElementById("time").innerText = times.toString(); 
       
   }
   let handle2 = () => {
@@ -49,14 +49,13 @@ function BookingMovie() {
             btns[i].addEventListener("click", function () {    
                 let buttonStyle = getComputedStyle(this);
                 let buttonColor =  buttonStyle["backgroundColor"];
-                if (buttonColor == color2) {btns[i].style.backgroundColor = color;  adddates(" " + btns[i].textContent);}
-                else {btns[i].style.backgroundColor = color2  ; dropdates(" " + btns[i].textContent);   
+                if (buttonColor == color) {btns[i].style.backgroundColor = color2;  adddates("" + btns[i].textContent);}
+                else {btns[i].style.backgroundColor = color  ; dropdates("" + btns[i].textContent);   
             }
             });         
         }
-    document.getElementById("date").innerText = dates;
+    document.getElementById("date").innerText = dates.toString();
 }
-    // 
 
 function removeItemAll(arr, value) {
 const index = arr.indexOf(value);
@@ -110,17 +109,17 @@ const index = arr.indexOf(value);
               <Col>
               <h1 className='name-class'>Cinema Booking System</h1>
               <div className="content-board">
-              <button className='btn1 date' onClick={handle2}>15 OCT</button>
-              <button className='btn1 date' onClick={handle2}>15 OCT</button>
-              <button className='btn1 date' onClick={handle2}>15 OCT</button>
-              <button className='btn1 date' onClick={handle2}>15 OCT</button>
-              <button className='btn1 date' onClick={handle2}>15 OCT</button>
-              <button className='btn1 date' onClick={handle2}>15 OCT</button>
-              <button className='btn1 date' onClick={handle2}>15 OCT</button>
-              <button className='btn1 date' onClick={handle2}>15 OCT</button>
-              <button className='btn1 date' onClick={handle2}>15 OCT</button>
-              <button className='btn1 date' onClick={handle2}>15 OCT</button>
-              <button className='btn1 date' onClick={handle2}>15 OCT</button>
+              <button className='btn1 date' onClick={handle2}>17 Dec</button>
+              <button className='btn1 date' onClick={handle2}>18 Dec</button>
+              <button className='btn1 date' onClick={handle2}>19 Dec</button>
+              <button className='btn1 date' onClick={handle2}>20 Dec</button>
+              <button className='btn1 date' onClick={handle2}>21 Dec</button>
+              <button className='btn1 date' onClick={handle2}>22 Dec</button>
+              <button className='btn1 date' onClick={handle2}>23 Dec</button>
+              <button className='btn1 date' onClick={handle2}>24 Dec</button>
+              <button className='btn1 date' onClick={handle2}>25 Dec</button>
+              <button className='btn1 date' onClick={handle2}>26 Dec</button>
+              <button className='btn1 date' onClick={handle2}>27 Dec</button>
               </div>
 
               </Col>
@@ -128,45 +127,45 @@ const index = arr.indexOf(value);
               <p className='name-class'>REGULAR 2D</p>
               <div className='content-board-time'>
                 <button className='btn1 time' onClick={handle}>1:00</button>
-                <button className='btn1 time' onClick={handle}>1:00</button>
-                <button className='btn1 time' onClick={handle}>1:00</button>
-                <button className='btn1 time' onClick={handle}>1:00</button>
+                <button className='btn1 time' onClick={handle}>2:00</button>
+                <button className='btn1 time' onClick={handle}>3:00</button>
+                <button className='btn1 time' onClick={handle}>4:00</button>
               </div>
               <div className='content-board-time'>
-                <button className='btn1 time' onClick={handle}>1:00</button>
-                <button className='btn1 time' onClick={handle}>1:00</button>
-                <button className='btn1 time' onClick={handle}>1:00</button>
-                <button className='btn1 time' onClick={handle}>1:00</button>
+                <button className='btn1 time' onClick={handle}>5:00</button>
+                <button className='btn1 time' onClick={handle}>6:00</button>
+                <button className='btn1 time' onClick={handle}>7:00</button>
+                <button className='btn1 time' onClick={handle}>8:00</button>
               </div>
               </Col>
               <Col>
               <p className='name-class'>GOLD CLASS 2D</p>
               <div className='content-board-time'>
                 <button className='btn1 time' onClick={handle}>1:00</button>
-                <button className='btn1 time' onClick={handle}>1:00</button>
-                <button className='btn1 time' onClick={handle}>1:00</button>
-                <button className='btn1 time' onClick={handle}>1:00</button>
+                <button className='btn1 time' onClick={handle}>2:00</button>
+                <button className='btn1 time' onClick={handle}>3:00</button>
+                <button className='btn1 time' onClick={handle}>4:00</button>
               </div>
               <div className='content-board-time'>
-                <button className='btn1 time' onClick={handle}>1:00</button>
-                <button className='btn1 time' onClick={handle}>1:00</button>
-                <button className='btn1 time' onClick={handle}>1:00</button>
-                <button className='btn1 time' onClick={handle}>1:00</button>
+                <button className='btn1 time' onClick={handle}>5:00</button>
+                <button className='btn1 time' onClick={handle}>6:00</button>
+                <button className='btn1 time' onClick={handle}>7:00</button>
+                <button className='btn1 time' onClick={handle}>8:00</button>
               </div>
               </Col>
               <Col>
               <p className='name-class'>VELVET 2D</p>
               <div className='content-board-time'>
                 <button className='btn1 time' onClick={handle}>1:00</button>
-                <button className='btn1 time' onClick={handle}>1:00</button>
-                <button className='btn1 time' onClick={handle}>1:00</button>
-                <button className='btn1 time' onClick={handle}>1:00</button>
+                <button className='btn1 time' onClick={handle}>2:00</button>
+                <button className='btn1 time' onClick={handle}>3:00</button>
+                <button className='btn1 time' onClick={handle}>4:00</button>
               </div>
               <div className='content-board-time'>
-                <button className='btn1 time' onClick={handle}>1:00</button>
-                <button className='btn1 time' onClick={handle}>1:00</button>
-                <button className='btn1 time' onClick={handle}>1:00</button>
-                <button className='btn1 time' onClick={handle}>1:00</button>
+                <button className='btn1 time' onClick={handle}>5:00</button>
+                <button className='btn1 time' onClick={handle}>6:00</button>
+                <button className='btn1 time' onClick={handle}>7:00</button>
+                <button className='btn1 time' onClick={handle}>8:00</button>
               </div>
               </Col>
               </Col>
@@ -184,10 +183,10 @@ const index = arr.indexOf(value);
                 <Col> 
                   <Col className='booking-form'>
                     <h4>FRESHMEN TAN PHU</h4>
-                    <div><div className='showdateselected' id='date'></div></div>
                     <p>REGULAR 2D </p>
                     <div className='content-booking'>
-                      <div className="showtimeselected" id="time"><h4> </h4></div>
+                      <div className='showdateselected' id='date'></div>
+                      <div className="showtimeselected" id="time"></div>
                       <p>* Seat selection can be made later</p>
                       <div className='background-booking'><button className='booking' onClick={handleBooking}>Book Now</button></div>
                     </div>
