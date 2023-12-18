@@ -11,6 +11,9 @@ import SignUp from "./component/Authentication/SignUp";
 import LogIn from "./component/Authentication/LogIn"
 import Booking from "./component/Booking/schedule/booking";
 import BookingPart from "./component/Booking/BookingPart/BookingPart";
+import Payment from "./component/PaymentConf/Payment";
+import Paymentsuccess from "./component/PaymentSuccess/paymentsuccess";
+
 function App() {
   // const [token, setToken] = useState()
   //   if(!token){
@@ -30,6 +33,8 @@ function App() {
         <Route path="/people" element={<PopularPeople/>}/>
         <Route path="/booking" element={<Booking/>}/>
         <Route path="/BookingPart" element={<BookingPart/>}/>
+        <Route path="/PaymentConfirm" element={<Payment/>}/>
+        <Route path="/success" element={<Paymentsuccess/>}/>
         {/* <Route path="/private" element={localStorage.getItem("accessToken") ? <Private /> : redirect("/login")} /> */}
         {/* <Route path="/private" element={token ? <Private /> : redirect("/login")} /> */}
       </Routes>

@@ -26,8 +26,7 @@ function BookingMovie() {
   const API_DETAIL = `https://api.themoviedb.org/3/movie/${id}?api_key=9b00e03c6d53581effb063d999d11128&language=vi`;
 
   var color = "rgb(240, 240, 240)";
-  var color2 = "rgb(0, 157, 255)";
-  reset();  
+  var color2 = "rgb(0, 157, 255)";  
   let handle = () => {
       let btns = document.getElementsByClassName("btn1"); 
           for (let i=0; i<btns.length; i++){    

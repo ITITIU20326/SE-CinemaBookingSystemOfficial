@@ -49,7 +49,7 @@ const SignIn = () => {
                             <div className="underline"></div>
                         </Form.Group>
                         <div className="submit-container">
-                            <div className="sub-button"><button type="submit">Log in</button></div>
+                            <div className="sub-button"><Link to={"/"}><button type="submit">Log in</button></Link></div>
                         </div>
                     </Form>
                         <div className="sub-infor"><h6>Don't have an account yet?</h6></div>

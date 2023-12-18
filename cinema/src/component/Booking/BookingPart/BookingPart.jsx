@@ -1,11 +1,17 @@
 import React from "react";
 import "./style.css";
-import {seats, prices, addprices, addseats, subprices, dropseats, reset} from "./const.js"
+import {seats, prices, addprices, addseats, subprices, dropseats, reset, times} from "./const.js"
+import { useNavigate } from 'react-router-dom';
+
 
 function BookingPart() {
+    let navigate = useNavigate()
+    let handleBooking = () => {
+    localStorage.removeItem("accessToken")
+    navigate("/PaymentConfirm")
+  }
   var color = "rgb(240, 240, 240)";
-  var color2 = "rgb(0, 157, 255)";
-  reset();  
+  var color2 = "rgb(0, 157, 255)"; 
   let handle = () => {
       let btns = document.getElementsByClassName("btn"); 
           for (let i=0; i<btns.length; i++){    
@@ -19,6 +25,7 @@ function BookingPart() {
           }
       document.getElementById("seat").innerText = seats.toString();
       document.getElementById("price").innerText = prices + " VND";
+
   }
   
   function removeItemAll(arr, value) {
@@ -48,9 +55,9 @@ function BookingPart() {
       </div>
   </div>
       <div class="time-picker">
-          <img class="img" src="img/32-clock.svg"/>
+          <img class="img" src={require('../BookingPart/img/clock.png')}/>
           <div class="base-selection">
-              <div class="bioskop">14:30</div>
+              <div class="bioskop">{times}</div>
           </div>
       </div>
       <div class="seats-picker">
@@ -216,10 +223,14 @@ function BookingPart() {
           <button class="btn seats-input-158" onClick={handle}><div class="text-wrapper-2">H20</div></button>
       </div>
       <div class="layar-bioskop"><div class="text-wrapper-3">Cinema Screen Here</div></div>
-      <div class="text-wrapper-4">Total</div>
-      <div class="text-wrapper-5">Chair</div>
-        <div class="text-wrapper-6" id="price">0 vnd</div>
+     <div className="confirm-footer">
+        <div class="text-wrapper-4">Total</div>
+        <div class="text-wrapper-5">Chair</div>
+        <div class="text-wrapper-6" id="price">0 VND</div>
         <div class="seat"><div class="text-wrapper-7" id="seat"> </div></div>
+
+        <div className='background-booking'><button className='booking' onClick={handleBooking}>Book Now</button></div>
+     </div>
   </div>    
   )
 

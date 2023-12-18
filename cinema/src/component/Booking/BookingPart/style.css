@@ -50,6 +50,11 @@
   left: 164px;
 }
 
+.container3 .img {
+  height: 27px;
+  width: 27px;
+}
+
 .container3 .seats-input {
   top: 0;
   left: 0px;
@@ -2851,6 +2856,17 @@
 .container3 button:hover {
   border-color:#8aa1bc; /* Green */
   color: rgb(55, 80, 160);
+}
+
+.confirm-footer {
+  display: flex;
+}
+
+.background-booking {
+  position: absolute;
+  top: 684px; 
+  left: 1014px;
+  
 }
 
 

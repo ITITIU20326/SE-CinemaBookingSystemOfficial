@@ -38,19 +38,27 @@ export function removeElementFromCollection(element, collection) {
 }
   
 export function addtimes(time) {
-    addElementToCollection(time, times);
+    const index = times.indexOf(time);
+    if (index<0) times.push(time);
 }
   
 export function droptimes(time) {
-    removeElementFromCollection(time, times);
+    const index = times.indexOf(time);
+    if (index > -1) { 
+    times.splice(index, 1); 
+}
 }
   
 export function adddates(date) {
-    addElementToCollection(date, dates);
+    const index = dates.indexOf(date);
+    if (index<0) dates.push(date);
 }
   
 export function dropdates(date) {
-    removeElementFromCollection(date, dates);
+    const index = dates.indexOf(date);
+    if (index > -1) { 
+    seats.splice(index, 1); 
+}
 }
 
 export function reset(){

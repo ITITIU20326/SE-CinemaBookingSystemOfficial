@@ -2,6 +2,7 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
 import { Form, Button, Card, Alert } from "react-bootstrap"
 import { auth } from "../../firebase";
+import {Link} from "react-router-dom"
 import "./styleAuth.css"
 
 const SignUp = () => {
@@ -86,7 +87,7 @@ const SignUp = () => {
         </Form.Group>
         
           <div className="submit-container">
-          <div className="sub-button"><button type="submit">Sign Up</button></div>
+          <div className="sub-button"><Link to={"/"}><button type="submit">Sign Up</button></Link></div>
           </div>
         </Form>
         <div className="sub-infor"><h6>*Each phone number can only be registered once</h6></div>
