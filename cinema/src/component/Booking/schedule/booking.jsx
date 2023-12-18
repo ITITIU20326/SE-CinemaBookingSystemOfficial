@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from 'react'
+// import { useParams } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import {Layout} from "antd"
 import { Col, Row} from 'antd';
 import Navigation from '../../Header';
 import Footer from '../../Footer/Footer';
+import { SmoothHorizontalScrolling } from '../../Content/utils';
+import { useRef } from 'react';
+import {CaretLeftOutlined, CaretRightOutlined} from '@ant-design/icons';
 import styled from "styled-components"
-import "./style.css"  
+import "./style.css"
+import {times, dates , addtimes, adddates, dropdates,droptimes, reset} from "../BookingPart/const"
 import { Link, useNavigate } from 'react-router-dom';
-import {addseats, dropseats, id, times, date, addtimes, droptimes, adddates, dropdates, reset, dates } from '../BookingPart/const'
-
-
+import {setID, id} from '../BookingPart/const';
 
 const { Header, Content } = Layout;
-// Sample data representing the schedule
-// CinemaSchedule component to display the booking schedule
-   
 function BookingMovie() {
   const [selectedTime, setSelectedTime] = useState(null);
   const [detail1, setDetail1] = useState({})
@@ -25,7 +25,6 @@ function BookingMovie() {
   const API_TRENDING="https://api.themoviedb.org/3/trending/all/day?api_key=9b00e03c6d53581effb063d999d11128";
   const API_DETAIL = `https://api.themoviedb.org/3/movie/${id}?api_key=9b00e03c6d53581effb063d999d11128&language=vi`;
 
-  reset(); 
   var color = "rgb(240, 240, 240)";
   var color2 = "rgb(0, 157, 255)";
   reset();  
@@ -41,21 +40,23 @@ function BookingMovie() {
               });         
           }
       document.getElementById("time").innerText = times.toString(); 
-      
+ 
   }
-  let handle2 = () => {
+  let handle1 = () => {
     let btns = document.getElementsByClassName("btn2"); 
         for (let i=0; i<btns.length; i++){    
             btns[i].addEventListener("click", function () {    
                 let buttonStyle = getComputedStyle(this);
                 let buttonColor =  buttonStyle["backgroundColor"];
-                if (buttonColor == color) {btns[i].style.backgroundColor = color2;  adddates("" + btns[i].textContent);}
-                else {btns[i].style.backgroundColor = color  ; dropdates("" + btns[i].textContent);   
+                if (buttonColor == color) {btns[i].style.backgroundColor = color2; adddates("" + btns[i].textContent);}
+                else {btns[i].style.backgroundColor = color  ; dropdates("" + btns[i].textContent);  
             }
             });         
         }
-    document.getElementById("date").innerText = dates.toString();
+    document.getElementById("date").innerText = dates.toString(); 
+
 }
+
 
 function removeItemAll(arr, value) {
 const index = arr.indexOf(value);
@@ -109,17 +110,17 @@ const index = arr.indexOf(value);
               <Col>
               <h1 className='name-class'>Cinema Booking System</h1>
               <div className="content-board">
-              <button className='btn1 date' onClick={handle2}>17 Dec</button>
-              <button className='btn1 date' onClick={handle2}>18 Dec</button>
-              <button className='btn1 date' onClick={handle2}>19 Dec</button>
-              <button className='btn1 date' onClick={handle2}>20 Dec</button>
-              <button className='btn1 date' onClick={handle2}>21 Dec</button>
-              <button className='btn1 date' onClick={handle2}>22 Dec</button>
-              <button className='btn1 date' onClick={handle2}>23 Dec</button>
-              <button className='btn1 date' onClick={handle2}>24 Dec</button>
-              <button className='btn1 date' onClick={handle2}>25 Dec</button>
-              <button className='btn1 date' onClick={handle2}>26 Dec</button>
-              <button className='btn1 date' onClick={handle2}>27 Dec</button>
+              <button className='btn2 date' onClick={handle1}>17 Dec</button>
+              <button className='btn2 date' onClick={handle1}>18 Dec</button>
+              <button className='btn2 date' onClick={handle1}>19 Dec</button>
+              <button className='btn2 date' onClick={handle1}>20 Dec</button>
+              <button className='btn2 date' onClick={handle1}>21 Dec</button>
+              <button className='btn2 date' onClick={handle1}>22 Dec</button>
+              <button className='btn2 date' onClick={handle1}>23 Dec</button>
+              <button className='btn2 date' onClick={handle1}>24 Dec</button>
+              <button className='btn2 date' onClick={handle1}>25 Dec</button>
+              <button className='btn2 date' onClick={handle1}>26 Dec</button>
+              <button className='btn2 date' onClick={handle1}>27 Dec</button>
               </div>
 
               </Col>
@@ -213,5 +214,4 @@ const CastSlider = styled.div `
         opacity: 1;
       }
     }
-`
-
+` 

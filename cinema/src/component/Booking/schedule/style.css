@@ -110,6 +110,20 @@ div>Row{
     background-color: rgb(240, 240, 240);
     font-size: 18px;
 }
+.btn2{
+
+    padding: 20px 20px 20px 20px;
+    margin: 20px 20px 20px 0;
+    border-radius: 15px;
+    border: 1px solid black;
+    font-weight: 500;
+    cursor: pointer;
+    overflow-x:auto;
+    min-width: 110px;
+    line-height: 15px;
+    background-color: rgb(240, 240, 240);
+    font-size: 18px;
+}
 .content-board{
     padding-left: 50px;
     font-size: 20px;
@@ -125,23 +139,14 @@ div>Row{
 .item{
     margin-top: 10px;
 }
-.btn-time{
-    padding: 15px 20px 15px 20px;
-    margin: 20px 20px 20px 0;
-    &:hover{
-        background-color: #031d33 ;
-        color: rgb(240, 240, 240);
-    }
-    border-radius: 15px;
-    border: 1px solid black;
-    font-weight: 500;
-    background-color: rgb(240, 240, 240);
-    cursor: pointer;
-}
 
 .showtimeselected{
     font-size: large;
     padding: 10px 0 10px 0;
+}
+.showdateselected{
+    font-size: large;
+    padding-top: 10px;
 }
 .showdateselected{
 
@@ -151,5 +156,6 @@ p{
     font-size: medium;
 }
 h4{
-    font-size: larger;
+    font-size: larger   ;
 }
+
