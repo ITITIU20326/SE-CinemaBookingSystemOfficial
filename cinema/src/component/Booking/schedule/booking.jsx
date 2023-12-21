@@ -188,7 +188,7 @@ const index = arr.indexOf(value);
                       <div className='showdateselected' id='date'></div>
                       <div className="showtimeselected" id="time"></div>
                       <p>* Seat selection can be made later</p>
-                      <div className='background-booking'><button className='booking' onClick={handleBooking}>Book Now</button></div>
+                      <div className='background-booking1'><button className='booking' onClick={handleBooking}>Book Now</button></div>
                     </div>
                     <p>{detail1.original_title}</p>
                   </Col>

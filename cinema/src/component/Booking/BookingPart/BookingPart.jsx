@@ -37,6 +37,7 @@ function BookingPart() {
   
   
   return (
+    
   <div className='container3'>
     <div class="text-wrapper">SELECT A SEAT</div>
   <p class="p">Choose the seat you will  occupy during the film screening</p>
@@ -229,7 +230,7 @@ function BookingPart() {
         <div class="text-wrapper-6" id="price">0 VND</div>
         <div class="seat"><div class="text-wrapper-7" id="seat"> </div></div>
 
-        <div className='background-booking'><button className='booking' onClick={handleBooking}>Book Now</button></div>
+        <div className='background-booking'><button className='booking' onClick={handleBooking}>Booking Now</button></div>
      </div>
   </div>    
   )

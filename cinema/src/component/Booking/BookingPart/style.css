@@ -2864,9 +2864,10 @@
 
 .background-booking {
   position: absolute;
-  top: 684px; 
+  top: 720px; 
   left: 1014px;
-  
+  background-color: #041f37;
+  border-radius:10px ;
 }
 
 
