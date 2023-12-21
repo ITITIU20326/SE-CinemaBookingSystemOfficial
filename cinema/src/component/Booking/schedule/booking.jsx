@@ -50,9 +50,11 @@ function BookingMovie() {
     let btns = document.getElementsByClassName("btn2"); 
         for (let i=0; i<btns.length; i++){    
             btns[i].addEventListener("click", function () {   
+              for (let j = 0; j < btns.length; j++) {
                 btns[j].style.backgroundColor = color;
-                  // Uncomment the line below if you want to remove all dates when clicking any button
-                  dropdates("" + btns[j].textContent); 
+                // Uncomment the line below if you want to remove all dates when clicking any button
+                dropdates("" + btns[j].textContent);
+            } 
                 let buttonStyle = getComputedStyle(this);
                 let buttonColor =  buttonStyle["backgroundColor"];
                 if (buttonColor == color) {btns[i].style.backgroundColor = color2; adddates("" + btns[i].textContent);}
