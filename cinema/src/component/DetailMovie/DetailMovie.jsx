@@ -150,17 +150,21 @@ function DetailMovie() {
                         <Recommendations recs={recs}/>
                       </Col>
                       <Col span={5} style={{marginLeft: 15, marginTop: 37}}>
-                        <Row justify={"left"} style={{marginBottom: 15 ,marginTop: 35}}>
-                          <div className="background-booking">
+                        <Row>
+                          <Col>
+                          <div className="background-booking1">
                             <p><button onClick={handleBooking} className='booking'>Booking Now</button></p>
                           </div>
+                          </Col>
                         </Row>
+                        <Row>
                         <Col> 
                           <Col>
                             <h4>Original Title</h4>
                             <p>{detail.original_title}</p>
                           </Col>
                         </Col>
+                        </Row>
                         <Row>
                           <Col>
                             <h4>Status</h4>

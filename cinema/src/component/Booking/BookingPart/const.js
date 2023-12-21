@@ -57,7 +57,7 @@ export function adddates(date) {
 export function dropdates(date) {
     const index = dates.indexOf(date);
     if (index > -1) { 
-    seats.splice(index, 1); 
+    dates.splice(index, 1); 
 }
 }
 
