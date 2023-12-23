@@ -14,7 +14,7 @@ function Navigation() {
         <div className="navleft">
           <p><Link to="/" className='logo'>TMDB</Link></p>
           <p><Link to={"/listmovies"} style={{color: "white"}}>Movies</Link></p>
-          <p className='tvshows'><Link to={""}></Link>TV Shows</p>
+          <p className='tvshows'><Link to={"/tvshows"} style={{color: "white"}}>TV Shows</Link></p>
           <p className='people'><Link to={"/people"} style={{color: "white"}}>People</Link></p>
           <p className='more'>More</p>
         </div>

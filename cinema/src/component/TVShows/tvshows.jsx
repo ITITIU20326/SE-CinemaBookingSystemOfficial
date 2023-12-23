@@ -7,28 +7,28 @@ import { Link } from 'react-router-dom';
 
 const { Header, Content } = Layout;
 
-function ListMovies() {
-    const API_TRENDING="https://api.themoviedb.org/3/trending/all/day?api_key=9b00e03c6d53581effb063d999d11128&language=en-US&page=1";
+function TVShowsPopular() {
+    const API_WHATPOPULAR = "https://api.themoviedb.org/3/tv/popular?api_key=9b00e03c6d53581effb063d999d11128&language=en-US&page=1"
    
     const [page, setPage] = useState('1')
-    const [movies, setMovies] = useState([]);
+    const [whatpopular, setWhatpopular] = useState([]);
     
 
     useEffect(() => {
-        fetch(API_TRENDING)
+        fetch(API_WHATPOPULAR)
         .then((res)=>res.json())
         .then(data=>{
-          setMovies(data.results)
-        
-        })
+          setWhatpopular(data.results)
+          })
       }, [])
+  
 
     const searchPage = async()=>{
-        const url=`https://api.themoviedb.org/3/trending/all/day?api_key=9b00e03c6d53581effb063d999d11128&language=en-US&page=${page}`;
+        const url=`https://api.themoviedb.org/3/tv/popular?api_key=9b00e03c6d53581effb063d999d11128&language=en-US&page=${page}`;
           const res = await fetch(url);
           const data = await res.json();
           console.log(data);
-          setMovies(data.results);
+          setWhatpopular(data.results);
     }
 
     const handleChange=(e)=>{
@@ -56,7 +56,7 @@ function ListMovies() {
                         <Col>
                             <Card className='content-search' style={{marginTop: 40}}>
                                     <Row className='grid' justify={"center"}>
-                                        {movies.map((data) => (
+                                        {whatpopular.map((data) => (
                                                 <Col span={5} className='grid-item' key={data.id}>
                                                 
                                                     <Link to={`/movie/${data.id}`}><div className='grid-item-data'>
@@ -99,4 +99,4 @@ function ListMovies() {
   )
 }
 
-export default ListMovies
+export default TVShowsPopular
