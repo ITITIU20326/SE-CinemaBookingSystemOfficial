@@ -13,6 +13,7 @@ import Booking from "./component/Booking/schedule/booking";
 import BookingPart from "./component/Booking/BookingPart/BookingPart";
 import Payment from "./component/PaymentConf/Payment";
 import Paymentsuccess from "./component/PaymentSuccess/paymentsuccess";
+import ListMovies from "./component/ListMovies/ListMovies"
 
 function App() {
   // const [token, setToken] = useState()
@@ -29,6 +30,7 @@ function App() {
         <Route path="/signup" element={<SignUp/>}/>
         <Route path="/search" element={<Search/>}/>
         <Route path="/movie/:id" element={<DetailMovie/>}/>
+        <Route path="/listmovies" element={<ListMovies/>}/>
         <Route path="/person/:id" element={<DetailPeople/>}/>
         <Route path="/people" element={<PopularPeople/>}/>
         <Route path="/booking" element={<Booking/>}/>
